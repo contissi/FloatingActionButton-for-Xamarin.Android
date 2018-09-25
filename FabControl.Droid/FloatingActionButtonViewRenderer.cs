@@ -110,6 +110,9 @@ namespace Refractored.FabControl.Droid
 
         void HandlePropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
         {
+            if (Element == null)
+                return;
+                
             if (e.PropertyName == "Content")
             {
                 Tracker.UpdateLayout();
